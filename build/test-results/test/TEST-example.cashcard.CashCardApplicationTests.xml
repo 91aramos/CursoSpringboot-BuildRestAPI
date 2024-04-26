@@ -1,18 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="example.cashcard.CashCardApplicationTests" tests="10" skipped="0" failures="0" errors="0" timestamp="2024-04-26T11:20:42" hostname="alejandro-pc" time="1.931">
+<testsuite name="example.cashcard.CashCardApplicationTests" tests="13" skipped="0" failures="0" errors="0" timestamp="2024-04-26T12:13:12" hostname="alejandro-pc" time="2.66">
   <properties/>
-  <testcase name="shouldReturnASortedPageOfCashCards()" classname="example.cashcard.CashCardApplicationTests" time="0.746"/>
-  <testcase name="shouldNotAllowAccessToCashCardsTheyDoNotOwn()" classname="example.cashcard.CashCardApplicationTests" time="0.076"/>
-  <testcase name="shouldReturnACashCardWhenDataIsSaved()" classname="example.cashcard.CashCardApplicationTests" time="0.062"/>
-  <testcase name="shouldCreateANewCashCard()" classname="example.cashcard.CashCardApplicationTests" time="0.167"/>
-  <testcase name="shouldRejectUsersWhoAreNotCardOwners()" classname="example.cashcard.CashCardApplicationTests" time="0.118"/>
+  <testcase name="shouldReturnASortedPageOfCashCards()" classname="example.cashcard.CashCardApplicationTests" time="0.73"/>
+  <testcase name="shouldNotAllowAccessToCashCardsTheyDoNotOwn()" classname="example.cashcard.CashCardApplicationTests" time="0.078"/>
+  <testcase name="shouldNotUpdateACashCardThatIsOwnedBySomeoneElse()" classname="example.cashcard.CashCardApplicationTests" time="0.078"/>
+  <testcase name="shouldReturnACashCardWhenDataIsSaved()" classname="example.cashcard.CashCardApplicationTests" time="0.06"/>
+  <testcase name="shouldCreateANewCashCard()" classname="example.cashcard.CashCardApplicationTests" time="0.152"/>
+  <testcase name="shouldRejectUsersWhoAreNotCardOwners()" classname="example.cashcard.CashCardApplicationTests" time="0.115"/>
   <testcase name="shouldReturnAPageOfCashCards()" classname="example.cashcard.CashCardApplicationTests" time="0.065"/>
-  <testcase name="shouldNotReturnACashCardWhenUsingBadCredentials()" classname="example.cashcard.CashCardApplicationTests" time="0.114"/>
-  <testcase name="shouldReturnAllCashCardsWhenListIsRequested()" classname="example.cashcard.CashCardApplicationTests" time="0.065"/>
-  <testcase name="shouldReturnASortedPageOfCashCardsWithNoParametersAndUseDefaultValues()" classname="example.cashcard.CashCardApplicationTests" time="0.057"/>
-  <testcase name="shouldNotReturnACashCardWithAnUnknownId()" classname="example.cashcard.CashCardApplicationTests" time="0.061"/>
-  <system-out><![CDATA[13:20:40.641 [Test worker] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [example.cashcard.CashCardApplicationTests]: CashCardApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
-13:20:40.703 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration example.cashcard.CashcardApplication for test class example.cashcard.CashCardApplicationTests
+  <testcase name="shouldUpdateAnExistingCashCard()" classname="example.cashcard.CashCardApplicationTests" time="0.135"/>
+  <testcase name="shouldNotUpdateACashCardThatDoesNotExist()" classname="example.cashcard.CashCardApplicationTests" time="0.116"/>
+  <testcase name="shouldNotReturnACashCardWhenUsingBadCredentials()" classname="example.cashcard.CashCardApplicationTests" time="0.117"/>
+  <testcase name="shouldReturnAllCashCardsWhenListIsRequested()" classname="example.cashcard.CashCardApplicationTests" time="0.066"/>
+  <testcase name="shouldReturnASortedPageOfCashCardsWithNoParametersAndUseDefaultValues()" classname="example.cashcard.CashCardApplicationTests" time="0.058"/>
+  <testcase name="shouldNotReturnACashCardWithAnUnknownId()" classname="example.cashcard.CashCardApplicationTests" time="0.059"/>
+  <system-out><![CDATA[14:13:10.617 [Test worker] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [example.cashcard.CashCardApplicationTests]: CashCardApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+14:13:10.679 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration example.cashcard.CashcardApplication for test class example.cashcard.CashCardApplicationTests
 
   .   ____          _            __ _ _
  /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
@@ -22,23 +25,23 @@
  =========|_|==============|___/=/_/_/_/
  :: Spring Boot ::                (v3.2.4)
 
-2024-04-26T13:20:40.896+02:00  INFO 61002 --- [    Test worker] e.cashcard.CashCardApplicationTests      : Starting CashCardApplicationTests using Java 17.0.10 with PID 61002 (started by alejandro in /home/alejandro/Repo/CursoSpringboot-BuildRestAPI)
-2024-04-26T13:20:40.897+02:00  INFO 61002 --- [    Test worker] e.cashcard.CashCardApplicationTests      : No active profile set, falling back to 1 default profile: "default"
-2024-04-26T13:20:41.236+02:00  INFO 61002 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
-2024-04-26T13:20:41.261+02:00  INFO 61002 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 22 ms. Found 1 JDBC repository interface.
-2024-04-26T13:20:41.570+02:00  INFO 61002 --- [    Test worker] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 0 (http)
-2024-04-26T13:20:41.578+02:00  INFO 61002 --- [    Test worker] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2024-04-26T13:20:41.579+02:00  INFO 61002 --- [    Test worker] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.19]
-2024-04-26T13:20:41.615+02:00  INFO 61002 --- [    Test worker] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2024-04-26T13:20:41.615+02:00  INFO 61002 --- [    Test worker] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 707 ms
-2024-04-26T13:20:41.682+02:00  INFO 61002 --- [    Test worker] o.s.j.d.e.EmbeddedDatabaseFactory        : Starting embedded database: url='jdbc:h2:mem:60cfd1bb-4d5a-4ffc-922d-e9cba66e712a;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=false', username='sa'
-2024-04-26T13:20:42.359+02:00  INFO 61002 --- [    Test worker] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@6630dd28, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@5909ae90, org.springframework.security.web.context.SecurityContextHolderFilter@5fc1e4fb, org.springframework.security.web.header.HeaderWriterFilter@47162173, org.springframework.web.filter.CorsFilter@4489f60f, org.springframework.security.web.authentication.logout.LogoutFilter@1218e12, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@698ac187, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@6fd7aba8, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@6c519e47, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@fe08eaf, org.springframework.security.web.access.ExceptionTranslationFilter@66b31d46, org.springframework.security.web.access.intercept.AuthorizationFilter@563843f1]
-2024-04-26T13:20:42.511+02:00  INFO 61002 --- [    Test worker] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 43949 (http) with context path ''
-2024-04-26T13:20:42.518+02:00  INFO 61002 --- [    Test worker] e.cashcard.CashCardApplicationTests      : Started CashCardApplicationTests in 1.747 seconds (process running for 2.316)
-2024-04-26T13:20:43.019+02:00  INFO 61002 --- [o-auto-1-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2024-04-26T13:20:43.019+02:00  INFO 61002 --- [o-auto-1-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2024-04-26T13:20:43.020+02:00  INFO 61002 --- [o-auto-1-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
-2024-04-26T13:20:43.575+02:00  INFO 61002 --- [    Test worker] o.s.j.d.e.EmbeddedDatabaseFactory        : Shutting down embedded database: url='jdbc:h2:mem:60cfd1bb-4d5a-4ffc-922d-e9cba66e712a;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=false'
+2024-04-26T14:13:10.881+02:00  INFO 80599 --- [    Test worker] e.cashcard.CashCardApplicationTests      : Starting CashCardApplicationTests using Java 17.0.10 with PID 80599 (started by alejandro in /home/alejandro/Repo/CursoSpringboot-BuildRestAPI)
+2024-04-26T14:13:10.882+02:00  INFO 80599 --- [    Test worker] e.cashcard.CashCardApplicationTests      : No active profile set, falling back to 1 default profile: "default"
+2024-04-26T14:13:11.220+02:00  INFO 80599 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2024-04-26T14:13:11.244+02:00  INFO 80599 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 22 ms. Found 1 JDBC repository interface.
+2024-04-26T14:13:11.582+02:00  INFO 80599 --- [    Test worker] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 0 (http)
+2024-04-26T14:13:11.593+02:00  INFO 80599 --- [    Test worker] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-04-26T14:13:11.594+02:00  INFO 80599 --- [    Test worker] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.19]
+2024-04-26T14:13:11.638+02:00  INFO 80599 --- [    Test worker] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-04-26T14:13:11.640+02:00  INFO 80599 --- [    Test worker] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 745 ms
+2024-04-26T14:13:11.713+02:00  INFO 80599 --- [    Test worker] o.s.j.d.e.EmbeddedDatabaseFactory        : Starting embedded database: url='jdbc:h2:mem:3aa4b744-ed3e-4947-9f3a-3acd635016e4;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=false', username='sa'
+2024-04-26T14:13:12.406+02:00  INFO 80599 --- [    Test worker] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@f49e81a, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@1b444b5, org.springframework.security.web.context.SecurityContextHolderFilter@2df71be0, org.springframework.security.web.header.HeaderWriterFilter@c754401, org.springframework.web.filter.CorsFilter@459bf87c, org.springframework.security.web.authentication.logout.LogoutFilter@61c4cebd, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@36871e98, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@3fef1e6b, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@4fee14b, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@5ae66c98, org.springframework.security.web.access.ExceptionTranslationFilter@97b5e6a, org.springframework.security.web.access.intercept.AuthorizationFilter@65f5cae3]
+2024-04-26T14:13:12.575+02:00  INFO 80599 --- [    Test worker] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 34099 (http) with context path ''
+2024-04-26T14:13:12.582+02:00  INFO 80599 --- [    Test worker] e.cashcard.CashCardApplicationTests      : Started CashCardApplicationTests in 1.837 seconds (process running for 2.409)
+2024-04-26T14:13:13.045+02:00  INFO 80599 --- [o-auto-1-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-04-26T14:13:13.045+02:00  INFO 80599 --- [o-auto-1-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-04-26T14:13:13.046+02:00  INFO 80599 --- [o-auto-1-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2024-04-26T14:13:13.682+02:00  INFO 80599 --- [    Test worker] o.s.j.d.e.EmbeddedDatabaseFactory        : Shutting down embedded database: url='jdbc:h2:mem:3aa4b744-ed3e-4947-9f3a-3acd635016e4;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=false'
 
   .   ____          _            __ _ _
  /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
@@ -48,22 +51,48 @@
  =========|_|==============|___/=/_/_/_/
  :: Spring Boot ::                (v3.2.4)
 
-2024-04-26T13:20:43.594+02:00  INFO 61002 --- [    Test worker] e.cashcard.CashCardApplicationTests      : Starting CashCardApplicationTests using Java 17.0.10 with PID 61002 (started by alejandro in /home/alejandro/Repo/CursoSpringboot-BuildRestAPI)
-2024-04-26T13:20:43.595+02:00  INFO 61002 --- [    Test worker] e.cashcard.CashCardApplicationTests      : No active profile set, falling back to 1 default profile: "default"
-2024-04-26T13:20:43.698+02:00  INFO 61002 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
-2024-04-26T13:20:43.702+02:00  INFO 61002 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 3 ms. Found 1 JDBC repository interface.
-2024-04-26T13:20:43.746+02:00  INFO 61002 --- [    Test worker] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 0 (http)
-2024-04-26T13:20:43.747+02:00  INFO 61002 --- [    Test worker] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2024-04-26T13:20:43.747+02:00  INFO 61002 --- [    Test worker] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.19]
-2024-04-26T13:20:43.756+02:00  INFO 61002 --- [    Test worker] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2024-04-26T13:20:43.756+02:00  INFO 61002 --- [    Test worker] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 160 ms
-2024-04-26T13:20:43.769+02:00  INFO 61002 --- [    Test worker] o.s.j.d.e.EmbeddedDatabaseFactory        : Starting embedded database: url='jdbc:h2:mem:09d97659-1810-4744-bb90-2a75e7669a06;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=false', username='sa'
-2024-04-26T13:20:43.937+02:00  INFO 61002 --- [    Test worker] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@51b11186, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@5d957cf0, org.springframework.security.web.context.SecurityContextHolderFilter@8d52313, org.springframework.security.web.header.HeaderWriterFilter@58c16efd, org.springframework.web.filter.CorsFilter@1a48a582, org.springframework.security.web.authentication.logout.LogoutFilter@51eafec0, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@57abe94d, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@64f49b3, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@23e3a27f, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@1221d607, org.springframework.security.web.access.ExceptionTranslationFilter@775a5a67, org.springframework.security.web.access.intercept.AuthorizationFilter@135a8808]
-2024-04-26T13:20:43.969+02:00  INFO 61002 --- [    Test worker] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 33541 (http) with context path ''
-2024-04-26T13:20:43.971+02:00  INFO 61002 --- [    Test worker] e.cashcard.CashCardApplicationTests      : Started CashCardApplicationTests in 0.39 seconds (process running for 3.768)
-2024-04-26T13:20:43.976+02:00  INFO 61002 --- [o-auto-2-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2024-04-26T13:20:43.977+02:00  INFO 61002 --- [o-auto-2-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2024-04-26T13:20:43.977+02:00  INFO 61002 --- [o-auto-2-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+2024-04-26T14:13:13.709+02:00  INFO 80599 --- [    Test worker] e.cashcard.CashCardApplicationTests      : Starting CashCardApplicationTests using Java 17.0.10 with PID 80599 (started by alejandro in /home/alejandro/Repo/CursoSpringboot-BuildRestAPI)
+2024-04-26T14:13:13.710+02:00  INFO 80599 --- [    Test worker] e.cashcard.CashCardApplicationTests      : No active profile set, falling back to 1 default profile: "default"
+2024-04-26T14:13:13.843+02:00  INFO 80599 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2024-04-26T14:13:13.848+02:00  INFO 80599 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 3 ms. Found 1 JDBC repository interface.
+2024-04-26T14:13:13.896+02:00  INFO 80599 --- [    Test worker] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 0 (http)
+2024-04-26T14:13:13.897+02:00  INFO 80599 --- [    Test worker] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-04-26T14:13:13.897+02:00  INFO 80599 --- [    Test worker] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.19]
+2024-04-26T14:13:13.905+02:00  INFO 80599 --- [    Test worker] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-04-26T14:13:13.905+02:00  INFO 80599 --- [    Test worker] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 193 ms
+2024-04-26T14:13:13.919+02:00  INFO 80599 --- [    Test worker] o.s.j.d.e.EmbeddedDatabaseFactory        : Starting embedded database: url='jdbc:h2:mem:99319f63-d2a4-46e7-b6b3-77d916d5d71e;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=false', username='sa'
+2024-04-26T14:13:14.095+02:00  INFO 80599 --- [    Test worker] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@17344d7, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@75b4db22, org.springframework.security.web.context.SecurityContextHolderFilter@2bed5828, org.springframework.security.web.header.HeaderWriterFilter@36e358de, org.springframework.web.filter.CorsFilter@670aac24, org.springframework.security.web.authentication.logout.LogoutFilter@1164990a, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@346a2799, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@52a2e2fb, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@7c0035dd, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@23909b3, org.springframework.security.web.access.ExceptionTranslationFilter@2041c9a3, org.springframework.security.web.access.intercept.AuthorizationFilter@29c76d75]
+2024-04-26T14:13:14.131+02:00  INFO 80599 --- [    Test worker] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 34213 (http) with context path ''
+2024-04-26T14:13:14.133+02:00  INFO 80599 --- [    Test worker] e.cashcard.CashCardApplicationTests      : Started CashCardApplicationTests in 0.442 seconds (process running for 3.96)
+2024-04-26T14:13:14.139+02:00  INFO 80599 --- [o-auto-2-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-04-26T14:13:14.139+02:00  INFO 80599 --- [o-auto-2-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-04-26T14:13:14.140+02:00  INFO 80599 --- [o-auto-2-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2024-04-26T14:13:14.450+02:00  INFO 80599 --- [    Test worker] o.s.j.d.e.EmbeddedDatabaseFactory        : Shutting down embedded database: url='jdbc:h2:mem:99319f63-d2a4-46e7-b6b3-77d916d5d71e;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=false'
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::                (v3.2.4)
+
+2024-04-26T14:13:14.469+02:00  INFO 80599 --- [    Test worker] e.cashcard.CashCardApplicationTests      : Starting CashCardApplicationTests using Java 17.0.10 with PID 80599 (started by alejandro in /home/alejandro/Repo/CursoSpringboot-BuildRestAPI)
+2024-04-26T14:13:14.470+02:00  INFO 80599 --- [    Test worker] e.cashcard.CashCardApplicationTests      : No active profile set, falling back to 1 default profile: "default"
+2024-04-26T14:13:14.547+02:00  INFO 80599 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2024-04-26T14:13:14.555+02:00  INFO 80599 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 5 ms. Found 1 JDBC repository interface.
+2024-04-26T14:13:14.609+02:00  INFO 80599 --- [    Test worker] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 0 (http)
+2024-04-26T14:13:14.609+02:00  INFO 80599 --- [    Test worker] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-04-26T14:13:14.610+02:00  INFO 80599 --- [    Test worker] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.19]
+2024-04-26T14:13:14.616+02:00  INFO 80599 --- [    Test worker] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-04-26T14:13:14.617+02:00  INFO 80599 --- [    Test worker] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 146 ms
+2024-04-26T14:13:14.630+02:00  INFO 80599 --- [    Test worker] o.s.j.d.e.EmbeddedDatabaseFactory        : Starting embedded database: url='jdbc:h2:mem:796f07ad-c672-43d8-99e1-d04fab755350;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=false', username='sa'
+2024-04-26T14:13:14.802+02:00  INFO 80599 --- [    Test worker] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@79735611, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@758ac46, org.springframework.security.web.context.SecurityContextHolderFilter@6bc08a77, org.springframework.security.web.header.HeaderWriterFilter@682270ff, org.springframework.web.filter.CorsFilter@4d2f8ee7, org.springframework.security.web.authentication.logout.LogoutFilter@67eabe02, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@4bdbfbc6, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@37922937, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@73483d4b, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@593e594f, org.springframework.security.web.access.ExceptionTranslationFilter@307e9c02, org.springframework.security.web.access.intercept.AuthorizationFilter@73072745]
+2024-04-26T14:13:14.825+02:00  INFO 80599 --- [    Test worker] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 44039 (http) with context path ''
+2024-04-26T14:13:14.827+02:00  INFO 80599 --- [    Test worker] e.cashcard.CashCardApplicationTests      : Started CashCardApplicationTests in 0.374 seconds (process running for 4.655)
+2024-04-26T14:13:14.834+02:00  INFO 80599 --- [o-auto-3-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-04-26T14:13:14.834+02:00  INFO 80599 --- [o-auto-3-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-04-26T14:13:14.835+02:00  INFO 80599 --- [o-auto-3-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
 ]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
