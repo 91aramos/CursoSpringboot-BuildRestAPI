@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta http-equiv="x-ua-compatible" content="IE=edge"/>
+<title>Test results - CashCardApplicationTests</title>
+<link href="../css/base-style.css" rel="stylesheet" type="text/css"/>
+<link href="../css/style.css" rel="stylesheet" type="text/css"/>
+<script src="../js/report.js" type="text/javascript"></script>
+</head>
+<body>
+<div id="content">
+<h1>CashCardApplicationTests</h1>
+<div class="breadcrumbs">
+<a href="../index.html">all</a> &gt; 
+<a href="../packages/example.cashcard.html">example.cashcard</a> &gt; CashCardApplicationTests</div>
+<div id="summary">
+<table>
+<tr>
+<td>
+<div class="summaryGroup">
+<table>
+<tr>
+<td>
+<div class="infoBox" id="tests">
+<div class="counter">10</div>
+<p>tests</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="failures">
+<div class="counter">0</div>
+<p>failures</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="ignored">
+<div class="counter">0</div>
+<p>ignored</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="duration">
+<div class="counter">1.531s</div>
+<p>duration</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</td>
+<td>
+<div class="infoBox success" id="successRate">
+<div class="percent">100%</div>
+<p>successful</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div id="tabs">
+<ul class="tabLinks">
+<li>
+<a href="#tab0">Tests</a>
+</li>
+<li>
+<a href="#tab1">Standard output</a>
+</li>
+</ul>
+<div id="tab0" class="tab">
+<h2>Tests</h2>
+<table>
+<thead>
+<tr>
+<th>Test</th>
+<th>Duration</th>
+<th>Result</th>
+</tr>
+</thead>
+<tr>
+<td class="success">shouldCreateANewCashCard()</td>
+<td class="success">0.167s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">shouldNotAllowAccessToCashCardsTheyDoNotOwn()</td>
+<td class="success">0.076s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">shouldNotReturnACashCardWhenUsingBadCredentials()</td>
+<td class="success">0.114s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">shouldNotReturnACashCardWithAnUnknownId()</td>
+<td class="success">0.061s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">shouldRejectUsersWhoAreNotCardOwners()</td>
+<td class="success">0.118s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">shouldReturnACashCardWhenDataIsSaved()</td>
+<td class="success">0.062s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">shouldReturnAPageOfCashCards()</td>
+<td class="success">0.065s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">shouldReturnASortedPageOfCashCards()</td>
+<td class="success">0.746s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">shouldReturnASortedPageOfCashCardsWithNoParametersAndUseDefaultValues()</td>
+<td class="success">0.057s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">shouldReturnAllCashCardsWhenListIsRequested()</td>
+<td class="success">0.065s</td>
+<td class="success">passed</td>
+</tr>
+</table>
+</div>
+<div id="tab1" class="tab">
+<h2>Standard output</h2>
+<span class="code">
+<pre>13:20:40.641 [Test worker] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [example.cashcard.CashCardApplicationTests]: CashCardApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+13:20:40.703 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration example.cashcard.CashcardApplication for test class example.cashcard.CashCardApplicationTests
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::                (v3.2.4)
+
+2024-04-26T13:20:40.896+02:00  INFO 61002 --- [    Test worker] e.cashcard.CashCardApplicationTests      : Starting CashCardApplicationTests using Java 17.0.10 with PID 61002 (started by alejandro in /home/alejandro/Repo/CursoSpringboot-BuildRestAPI)
+2024-04-26T13:20:40.897+02:00  INFO 61002 --- [    Test worker] e.cashcard.CashCardApplicationTests      : No active profile set, falling back to 1 default profile: &quot;default&quot;
+2024-04-26T13:20:41.236+02:00  INFO 61002 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2024-04-26T13:20:41.261+02:00  INFO 61002 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 22 ms. Found 1 JDBC repository interface.
+2024-04-26T13:20:41.570+02:00  INFO 61002 --- [    Test worker] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 0 (http)
+2024-04-26T13:20:41.578+02:00  INFO 61002 --- [    Test worker] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-04-26T13:20:41.579+02:00  INFO 61002 --- [    Test worker] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.19]
+2024-04-26T13:20:41.615+02:00  INFO 61002 --- [    Test worker] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-04-26T13:20:41.615+02:00  INFO 61002 --- [    Test worker] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 707 ms
+2024-04-26T13:20:41.682+02:00  INFO 61002 --- [    Test worker] o.s.j.d.e.EmbeddedDatabaseFactory        : Starting embedded database: url='jdbc:h2:mem:60cfd1bb-4d5a-4ffc-922d-e9cba66e712a;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=false', username='sa'
+2024-04-26T13:20:42.359+02:00  INFO 61002 --- [    Test worker] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@6630dd28, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@5909ae90, org.springframework.security.web.context.SecurityContextHolderFilter@5fc1e4fb, org.springframework.security.web.header.HeaderWriterFilter@47162173, org.springframework.web.filter.CorsFilter@4489f60f, org.springframework.security.web.authentication.logout.LogoutFilter@1218e12, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@698ac187, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@6fd7aba8, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@6c519e47, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@fe08eaf, org.springframework.security.web.access.ExceptionTranslationFilter@66b31d46, org.springframework.security.web.access.intercept.AuthorizationFilter@563843f1]
+2024-04-26T13:20:42.511+02:00  INFO 61002 --- [    Test worker] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 43949 (http) with context path ''
+2024-04-26T13:20:42.518+02:00  INFO 61002 --- [    Test worker] e.cashcard.CashCardApplicationTests      : Started CashCardApplicationTests in 1.747 seconds (process running for 2.316)
+2024-04-26T13:20:43.019+02:00  INFO 61002 --- [o-auto-1-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-04-26T13:20:43.019+02:00  INFO 61002 --- [o-auto-1-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-04-26T13:20:43.020+02:00  INFO 61002 --- [o-auto-1-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2024-04-26T13:20:43.575+02:00  INFO 61002 --- [    Test worker] o.s.j.d.e.EmbeddedDatabaseFactory        : Shutting down embedded database: url='jdbc:h2:mem:60cfd1bb-4d5a-4ffc-922d-e9cba66e712a;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=false'
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::                (v3.2.4)
+
+2024-04-26T13:20:43.594+02:00  INFO 61002 --- [    Test worker] e.cashcard.CashCardApplicationTests      : Starting CashCardApplicationTests using Java 17.0.10 with PID 61002 (started by alejandro in /home/alejandro/Repo/CursoSpringboot-BuildRestAPI)
+2024-04-26T13:20:43.595+02:00  INFO 61002 --- [    Test worker] e.cashcard.CashCardApplicationTests      : No active profile set, falling back to 1 default profile: &quot;default&quot;
+2024-04-26T13:20:43.698+02:00  INFO 61002 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2024-04-26T13:20:43.702+02:00  INFO 61002 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 3 ms. Found 1 JDBC repository interface.
+2024-04-26T13:20:43.746+02:00  INFO 61002 --- [    Test worker] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 0 (http)
+2024-04-26T13:20:43.747+02:00  INFO 61002 --- [    Test worker] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-04-26T13:20:43.747+02:00  INFO 61002 --- [    Test worker] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.19]
+2024-04-26T13:20:43.756+02:00  INFO 61002 --- [    Test worker] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-04-26T13:20:43.756+02:00  INFO 61002 --- [    Test worker] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 160 ms
+2024-04-26T13:20:43.769+02:00  INFO 61002 --- [    Test worker] o.s.j.d.e.EmbeddedDatabaseFactory        : Starting embedded database: url='jdbc:h2:mem:09d97659-1810-4744-bb90-2a75e7669a06;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=false', username='sa'
+2024-04-26T13:20:43.937+02:00  INFO 61002 --- [    Test worker] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@51b11186, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@5d957cf0, org.springframework.security.web.context.SecurityContextHolderFilter@8d52313, org.springframework.security.web.header.HeaderWriterFilter@58c16efd, org.springframework.web.filter.CorsFilter@1a48a582, org.springframework.security.web.authentication.logout.LogoutFilter@51eafec0, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@57abe94d, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@64f49b3, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@23e3a27f, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@1221d607, org.springframework.security.web.access.ExceptionTranslationFilter@775a5a67, org.springframework.security.web.access.intercept.AuthorizationFilter@135a8808]
+2024-04-26T13:20:43.969+02:00  INFO 61002 --- [    Test worker] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 33541 (http) with context path ''
+2024-04-26T13:20:43.971+02:00  INFO 61002 --- [    Test worker] e.cashcard.CashCardApplicationTests      : Started CashCardApplicationTests in 0.39 seconds (process running for 3.768)
+2024-04-26T13:20:43.976+02:00  INFO 61002 --- [o-auto-2-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-04-26T13:20:43.977+02:00  INFO 61002 --- [o-auto-2-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-04-26T13:20:43.977+02:00  INFO 61002 --- [o-auto-2-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+</pre>
+</span>
+</div>
+</div>
+<div id="footer">
+<p>
+<div>
+<label class="hidden" id="label-for-line-wrapping-toggle" for="line-wrapping-toggle">Wrap lines
+<input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
+</label>
+</div>Generated by 
+<a href="http://www.gradle.org">Gradle 8.7</a> at 26 abr 2024 13:20:44</p>
+</div>
+</div>
+</body>
+</html>
