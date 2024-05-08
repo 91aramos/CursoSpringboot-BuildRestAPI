@@ -41,12 +41,17 @@ class SecurityConfig {
        .password(passwordEncoder.encode("abc123"))
        .roles("CARD-OWNER") // No roles for now
        .build();
-       UserDetails hankOwnsNoCards = users
+    UserDetails hankOwnsNoCards = users
        .username("hank-owns-no-cards")
        .password(passwordEncoder.encode("qrs456"))
        .roles("NON-OWNER") // No roles for now
        .build();
-     return new InMemoryUserDetailsManager(sarah,hankOwnsNoCards);
+    UserDetails kumar = users
+       .username("kumar2")
+       .password(passwordEncoder.encode("xyz789"))
+       .roles("CARD-OWNER") // No roles for now
+       .build();
+     return new InMemoryUserDetailsManager(sarah,hankOwnsNoCards,kumar);
     }
     @Bean
     PasswordEncoder passwordEncoder() {
