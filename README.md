@@ -4,7 +4,9 @@ runme:
   version: v3
 ---
 
-# CursoSpringboot-BuildRestAPI
+# CursoSpringboot-FamilyCashCard
+
+Family Cash Card application — a modern way for parents to manage allowance funds for their kiddos
 
 When you create a project using Spring Initializr, you're asked to provide some basic information about your project. Here's what each of the terms means:
 
@@ -82,4 +84,11 @@ PUT (exchange)
         ResponseEntity<Void> response = restTemplate
                 .withBasicAuth("sarah1", "abc123")
                 .exchange("/cashcards/99", HttpMethod.PUT, request, Void.class);
+```
+
+DELETE(exchange)
+```
+        ResponseEntity<Void> response = restTemplate
+                .withBasicAuth("sarah1", "abc123")
+                .exchange("/cashcards/99", HttpMethod.DELETE, null, Void.class);
 ```
